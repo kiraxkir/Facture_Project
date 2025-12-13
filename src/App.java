@@ -45,13 +45,13 @@ void main() {
             }
             if (choix == 2 ) 
             {
-                IO.print(panier.calculerTotal());
+               Facture facture = new Facture(new Client("kira","0992415748"),panier); 
+               facture.afficherFacture();
+               break;
             }
             if (choix == 3)
             {
-                panier.afficherPanier() ;
-                break ; 
-
+                panier.afficherPanier();
             }
 
 

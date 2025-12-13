@@ -43,9 +43,9 @@ public void afficherFacture() {
     IO.println("╔════════════════════════════════════════════════════════════════════════════════╗");
     IO.println("║                                    FACTURE                                     ║");
     IO.println("║                                                                                ║");
-    IO.println("║                            Votre Entreprise SARL                              ║");
-    IO.println("║                         Adresse : 123 Rue de la Paix                          ║");
-    IO.println("║                              Tel :  +33 6 XX XX XX XX                          ║");
+    IO.println("║                                      TP JAVA                                   ║");
+    IO.println("║                                        UPC                                     ║");
+    IO.println("║                              Tel :  +243 99241578                              ║");
     IO.println("╚════════════════════════════════════════════════════════════════════════════════╝");
     IO.println();
     
@@ -53,17 +53,22 @@ public void afficherFacture() {
     client.AfficherClient();
     IO.println("└──────────────────────────────────────────────────────────────────────────────┘");
     IO.println();
-    
     IO.println("┌─ DÉTAIL DES ARTICLES ─────────────────────────────────────────────────────┐");
     IO.println("│ N°  │ Désignation                      │ Quantité │  P.U.  │    Total      │");
     IO.println("├─────┼──────────────────────────────────┼──────────┼────────┼───────────────┤");
-    
+
     int i = 1;
     for (Achat a : panier.getPanier()) {
-        IO.println(String.format("│ %-3d │ %-32s │          │        │               │", i, a.afficherAchat()));
+        String designation = a.getArticle().afficherArticle();
+        int quantite = a.getQuantite();
+        double prixUnitaire = a.getArticle().getprix();
+        double sousTotal = a.getSousTotal();
+        
+        IO.println(String.format("│ %-3d │ %-32s │    %-6d │ %6.2f │ %13.2f │", i, designation, quantite, prixUnitaire, sousTotal));
         i++;
     }
-    
+
+IO.println("└─────┴──────────────────────────────────┴──────────┴────────┴───────────────┘");
     IO. println("└─────┴──────────────────────────────────┴──────────┴────────┴───────────────┘");
     IO.println();
     
