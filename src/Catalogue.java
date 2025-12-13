@@ -15,11 +15,17 @@ public class Catalogue {
         count++;
     }
 
-    public void afficherCatalogue(){
-    for (Article a : catalogue)
-    {
-        a.afficherArticle();
+    public void afficherCatalogue() {
+        for (int i = 0; i < count; i++) {
+            IO.println((i + 1) + " - " + catalogue[i].afficherArticle());
+        }
     }
 
+    public Article getArticle(int index) {
+    return catalogue[index];
 }
+    
+
+
+
 }
