@@ -7,6 +7,7 @@ public class Panier
 
 
 
+
     public Panier (){}
 
     public void  ajoutPanier(Achat a ){
@@ -23,4 +24,14 @@ public class Panier
 
         }
     }
+    public double calculerTotal() {
+        double ht =  0;
+   
+        for (Achat a : panier) {
+            ht+=a.getSousTotal() ; 
+        }
+
+        return ht ;  
+    }
+    
 }
