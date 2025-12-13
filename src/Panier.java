@@ -33,5 +33,8 @@ public class Panier
 
         return ht ;  
     }
+    public ArrayList<Achat> getPanier() {
+    return panier;
+}
     
 }
