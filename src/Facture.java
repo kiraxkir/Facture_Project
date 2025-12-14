@@ -46,6 +46,15 @@ public void afficherFacture() {
     double montantTVA = tva();
     double totalTTC = totalHT - montantRemise + montantTVA;
 
+    IO.println();
+    IO.println();
+    IO.println("impression de la facture ...");
+    IO.println();
+    IO.println();
+    IO.println();
+    IO.println();
+    IO.println();
+    IO.println();
     IO.println("╔════════════════════════════════════════════════════════════════════════════════╗");
     IO.println("║                                    FACTURE                                     ║");
     IO.println("║                                                                                ║");
@@ -59,8 +68,8 @@ public void afficherFacture() {
     client.AfficherClient();
     IO.println("└──────────────────────────────────────────────────────────────────────────────┘");
     IO.println();
-    IO.println("┌─ DÉTAIL DES ARTICLES ────────────────────────────────────────────────────────┐");
-    IO.println("│ N°  │ Désignation                      │ Quantité  │  P.U.  │    Total       │");
+    IO.println("┌─ DÉTAIL DES ARTICLES ───────────────────────────────────────────────────────┐");
+    IO.println("│ N°  │ Désignation                      │ Quantité  │  P.U.  │    Total      │");
     IO.println("├─────┼──────────────────────────────────┼───────────┼────────┼───────────────┤");
     int i = 1;
     for (Achat a : panier.getPanier()) {
@@ -73,8 +82,8 @@ public void afficherFacture() {
         i++;
     }
 
-IO.println("└─────┴──────────────────────────────────┴──────────┴────────┴───────────────┘");
-    IO. println("└─────┴──────────────────────────────────┴──────────┴────────┴───────────────┘");
+        IO.println("└─────┴──────────────────────────────────┴───────────┴────────┴───────────────┘");
+   
     IO.println();
     
     IO.println("┌──────────────────────────────────────────────────────────────────────────────┐");

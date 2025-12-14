@@ -8,20 +8,43 @@ void main() {
     Produit listeProduit = new Produit() ;
     listeProduit.creationCatalogue(cat); 
     Panier panier = new Panier() ; 
+    IO.println();
+    IO.println();
+    IO.println();
+    IO.println();
+
+    IO.println("-------------------------BIENVENUE DANS NOTRE BOUTIQUE------------------------------") ; 
+    IO.println("---------------Notre catalogue de produit vous es presenté si dessous : -------------------") ;
+    IO.println();
+    
 
 
+    IO.print("Pourriez vous nous renseigner: \nvotre NOM : ");
+    String nom = sc.nextLine();
+    IO.print("Numero de telephone : ") ; 
+    String Telephone = sc.nextLine() ; 
 
-   
-    cat.afficherCatalogue();
 
     
-        IO.println("| 1.ajouter un article au panier \n| 2.payer                        \n|3.afficher le panier   |");
+
+
+
   
-     
+    cat.afficherCatalogue();
 
         while (true) {
-        IO.print("quel est votre choix") ; 
-        int choix = sc.nextInt() ; 
+            
+    IO.println("┌─────────────────────────────────────────────────────────────────────────────────┐");
+    IO.println("│                              OPTIONS :                                          │");
+    IO.println("│                       1.ajouter un article au panier                            │");
+    IO.println("│                       2.afficher le panier                                      │");
+    IO.println("│                       3.Passez au payement                                      │");
+    IO.println("│                       4.Annuler tout                                            │");
+    IO.println("└─────────────────────────────────────────────────────────────────────────────────┘");
+    IO.print("quel est votre choix") ; 
+    int choix = sc.nextInt() ; 
+
+    //le chois un est un do while, reste dans le mode panier tant que l utilisateur na pas taper 0
             if (choix == 1 )                  
             {
                     int numProduit;
@@ -40,16 +63,21 @@ void main() {
                         }
                     } while (numProduit != 0);
             }
-            if (choix == 2 ) 
+            if (choix == 3 ) 
             {
-               Facture facture = new Facture(new Client("kira","0992415748"),panier); 
+               Facture facture = new Facture(new Client(nom,Telephone),panier); 
                facture.afficherFacture();
+
                break;
             }
-            if (choix == 3)
+            if (choix == 2)
             {
                 panier.afficherPanier();
             }
+            if(choix==4){
+                IO.print("Merci  avoir utiliser notre application");
+            }
+  
 
 
 

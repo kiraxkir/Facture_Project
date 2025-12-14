@@ -17,13 +17,25 @@ public class Panier
 
     }
 
-    public void afficherPanier(){
-        int i = 1;
-        for (Achat a : panier){
-            IO.println( i +" - "+a.afficherAchat()) ; 
+  
+public void afficherPanier() {
 
-        }
+    IO.println("┌──────────────────────────────────────────────────────────────┐");
+    IO.println("│                        PANIER D'ACHATS                       │");
+    IO.println("├────┬─────────────────────────────────────────────────────────┤");
+    IO.println("│ N° │ DÉTAIL DE L'ACHAT                                       │");
+    IO.println("├────┼─────────────────────────────────────────────────────────┤");
+
+    int i = 1;
+
+    for (Achat a : panier) {
+        IO.println(String.format("│ %-2d │ %-55s │",i,a.afficherAchat()));
+        i++;
     }
+    IO.println("└────┴─────────────────────────────────────────────────────────┘");
+}
+
+    
     public double calculerTotal() {
         double ht =  0;
    
