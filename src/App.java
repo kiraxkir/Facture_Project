@@ -6,17 +6,14 @@ void main() {
     Catalogue cat =new Catalogue() ; 
 
     Produit listeProduit = new Produit() ;
-    listeProduit.buildCatalogue(cat); 
+    listeProduit.creationCatalogue(cat); 
     Panier panier = new Panier() ; 
 
 
 
    
     cat.afficherCatalogue();
-    // panier.ajoutPanier(new Achat (cat.getArticle(1) , 10 ));
-    // panier.afficherPanier();
-    // IO.println(panier.calculerTotal()) ; 
-    
+
     
         IO.println("| 1.ajouter un article au panier \n| 2.payer                        \n|3.afficher le panier   |");
   

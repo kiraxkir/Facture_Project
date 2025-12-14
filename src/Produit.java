@@ -2,7 +2,7 @@
 
 public class Produit 
 {
-    public static void buildCatalogue(Catalogue cat) 
+    public static void creationCatalogue(Catalogue cat) 
     {
         
     cat.ajouterArticle(new Article("Farine", 3.5));

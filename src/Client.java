@@ -15,6 +15,6 @@ public class Client
     public String getNomClient() {return nomclient ;}
     public String getNumeroClient() {return numTel ;}
 
-    public void AfficherClient () {IO.println("Nom : "+ nomclient+" |"+ " telephone : "+numTel );}
+    public void AfficherClient () {IO.println("      Nom : "+ nomclient+" |"+ " telephone : "+numTel );}
 
 }

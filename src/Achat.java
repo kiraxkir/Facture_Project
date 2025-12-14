@@ -18,6 +18,9 @@ public class Achat {
         return article.afficherArticle() + " x " + quantite +
                " = " + getSousTotal();
     }
+    public Article getArticle(){
+        return article ;
+    }
     public int getqte() {return quantite;}
     
 }
